@@ -53,9 +53,9 @@ nav a{
 /* header related style */
 .header{
     background-color: #FFF8F3;
-    background-image: url('../images/header_bg.png');
+    background-image: url('../images/header_bg.png'), url('../images/developer.png');
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom right, top left;
 }
 .banner{
     padding: 30px 30px 0px 150px;
@@ -174,4 +174,32 @@ footer{
     background: #FFF;
     border: 0;
     width: 100%;
+}
+
+
+/* responsive styles */
+
+/* mobile devices */
+
+.hide{
+    display: none;
+}
+
+@media screen and (max-width:576px) {
+    .skills-container, .resume-container, footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    #what-i-do-description{
+        padding: 20px;
+    }
+    footer{
+        padding: 10px;
+    }
+    .footer-column{
+        width: 100%;
+    }
+    .contact input[type="text"], .contact input[type="email"], textarea{
+        width: 70%;
+    }
 }
