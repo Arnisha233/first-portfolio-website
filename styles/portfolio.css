@@ -1,6 +1,8 @@
 /* common shard style */
 body{
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 .text-primary{
     color: #FD6E0A;
@@ -105,6 +107,7 @@ main-section{
 .about-info{
     text-align: center;
 }
+.banner,
 #what-i-do-description{
     padding: 30px 150px;
 }
@@ -186,18 +189,36 @@ footer{
 }
 
 @media screen and (max-width:576px) {
-    .skills-container, .resume-container, footer{
+    .header{
+        background-image: none;
+    }
+    .banner,
+    .skills-container,
+    .resume-container,
+    footer,
+    .about-info-container,
+    nav, nav > ul
+    {
         flex-direction: column;
         text-align: center;
+    }
+    nav > ul{
+        gap: 10px;
+    }
+    .banner .profile-picture {
+        width: 100%;
     }
     #what-i-do-description{
         padding: 20px;
     }
-    footer{
+    footer, .about{
         padding: 10px;
     }
     .footer-column{
         width: 100%;
+    }
+    .btn-primary{
+        margin-bottom: 10px;
     }
     .contact input[type="text"], .contact input[type="email"], textarea{
         width: 70%;
